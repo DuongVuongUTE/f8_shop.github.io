@@ -410,12 +410,22 @@
     align-items: center;
     padding: 0 8px;
 }
+.header__mobile-menu {
+    padding: 0 12px;
+    display: none;
+}
 .header__mobile-search {
     padding: 0 12px;
     display: none;
 }
-.header__mobile-search-icon {
-    font-size: 3rem;
+.header__mobile-menu-icon {
+    font-size: 3.3rem;
+    color: var(--white-color);
+}
+i.header__mobile-search-icon {
+    font-size: 2.8rem;
+    line-height: 33px;
+    display: block;
     color: var(--white-color);
 }
 
@@ -924,6 +934,63 @@
 .home-filter__page-btn--disable .home-filter__page-icon {
     color: #ccc;
 }
+/* Mobile - catelory - menu */
+
+.catetory-menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: var(--white-color);
+    z-index: 10000;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+.catetory-menu-mobile__heading {
+    font-size: 2.6rem;
+    color: var(--primary-color);
+}
+.catetory-menu-mobile-list {
+    padding-left: 0;
+    list-style: none;
+    padding-left: 10px;
+}
+.catetory-menu-mobile-item {
+
+}
+.catetory-menu-mobile__link {
+    font-size: 1.8rem;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    color: var(--text-color);
+}
+.catetory-menu-mobile__link:hover {
+    color: var(--primary-color);
+}
+.overlay-mobile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    opacity: 0;
+    display: none;
+    transition: all linear 0.3s;
+}
+.btn-mobile-close {
+    font-size: 4rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
 /* Mobile - catelory */
 
 .mobile-catelory {
@@ -943,16 +1010,6 @@
     flex-shrink: 0;
     margin-right: 10px;
 }
-.mobile-catelory__link:nth-of-type(3n + 1){
-    background-color: #87AFD8;
-} 
-.mobile-catelory__link:nth-of-type(3n + 2){
-    background-color: #76C9BD;
-} 
-
-.mobile-catelory__link:nth-of-type(3n + 3){
-    background-color: #88CF31;
-} 
 .mobile-catelory__link {
     --line-height: 2rem;
     text-decoration: none;
@@ -973,6 +1030,15 @@
     user-select: none;
     -webkit-user-select: none;
 }
+.mobile-catelory__item:nth-of-type(3n + 1) .mobile-catelory__link{
+    background-color: #87AFD8;
+} 
+.mobile-catelory__item:nth-of-type(3n + 2) .mobile-catelory__link{
+    background-color: #76C9BD;
+} 
+.mobile-catelory__item:nth-of-type(3n + 3) .mobile-catelory__link{
+    background-color: #88CF31;
+} 
 /* product */
 .home-product {
     margin-bottom: 10px;
